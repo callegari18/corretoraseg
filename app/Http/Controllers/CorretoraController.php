@@ -3,13 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CardIndex;
 
 class CorretoraController extends Controller
 {
     //
     public function home(){
-       
-        return view('corretora.home');
+        $cards = cardIndex::all();
+        return view('corretora.home',[
+            'cartoes' =>$cards
+        ]);
     }
     public function sobre(){
        

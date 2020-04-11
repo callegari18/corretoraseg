@@ -15,17 +15,21 @@
         @include('corretora.menu')
 
     </header>
+    <!-- CONTEUDO ABAIXO NO MENU INICIAL-->
     <main role="main">
-        <section class="container mb-5">
-            <div class="col-12 mt-3">
+        <section class="container ">
+            <div class="col-12 mt-1">
                 <h1 class="h1 text-center">@yield('nome_pag')</h1>
             </div>
-            </div>
+
             <hr>
+
             @yield('principal')
+
         </section>
 
     </main>
+
     <footer class=" navbar-dark bg-dark fixed-bottom text-center text-white py-3">
 
         @include("corretora.footer")
